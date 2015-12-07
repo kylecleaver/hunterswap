@@ -27,7 +27,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @equipment.category_id %>
+  <%= @equipment.category.name %>
 </p>
 
 <p>
@@ -39,6 +39,10 @@
   <strong>Purchase date:</strong>
   <%= @equipment.purchase_date %>
 </p>
+
+<%= @equipment.latitude %>
+<%= @equipment.longitude %>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=20&markers=#{@equipment.latitude}%2C#{@equipment.longitude}" %>
 
 <p>
   <strong>City:</strong>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206023620) do
+ActiveRecord::Schema.define(version: 20151207232204) do
 
   create_table "bids", force: :cascade do |t|
     t.string   "offer"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 20151206023620) do
     t.string   "state"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
