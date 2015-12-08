@@ -2,9 +2,8 @@
 
 <h1>Listing Categories</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
-    <table class="table">
     <tr>
       <th>Name</th>
       <th>Description</th>
@@ -13,7 +12,6 @@
   </thead>
 
   <tbody>
-    <table class="table table-striped">
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>

@@ -1,0 +1,9 @@
+require 'fullcontact'
+
+    # This could go in an initializer
+    FullContact.configure do |config|
+        config.api_key = 'fullcontact_api_key_goes_here'
+    end
+
+    # Get information about an email address
+    person = FullContact.person(email: 'bart@fullcontact.com')
