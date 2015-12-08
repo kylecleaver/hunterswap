@@ -28,6 +28,7 @@ class BidsController < ApplicationController
 
     respond_to do |format|
       if @bid.save
+        UserMailer.new_bid_received(@bid.id).deliver_now
         format.html { redirect_to @bid, notice: 'Bid was successfully created.' }
         format.json { render :show, status: :created, location: @bid }
       else

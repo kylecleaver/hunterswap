@@ -16,7 +16,7 @@
     <% @bids.each do |bid| %>
       <tr>
         <td><%= bid.offer %></td>
-        <td><%= bid.equipment_id %></td>
+        <td><%= bid.equipment.name %></td>
         <td><%= bid.user.email %></td>
         <td><%= link_to 'Show', bid %></td>
         <td><%= link_to 'Edit', edit_bid_path(bid) %></td>

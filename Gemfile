@@ -48,4 +48,4 @@ gem 'simple_form'
 gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
 gem 'geocoder'
-
+gem "letter_opener", :group => :development
