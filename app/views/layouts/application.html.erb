@@ -3,6 +3,7 @@
 <head>
   <title>Hunterswap</title>
 
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -10,9 +11,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= link_to "Equipment", equipment_index_path %>
-	<%= link_to "Categories", categories_path %>
-	<%= link_to "Bids", bids_path %>
+	<%= link_to "Equipment", equipment_index_path, :class => "btn btn-default btn-xs" %>
+	<%= link_to "Categories", categories_path, :class => "btn btn-default btn-xs" %>
+	<%= link_to "Bids", bids_path, :class => "btn btn-default btn-xs" %>
 
 	<div class="container">
 

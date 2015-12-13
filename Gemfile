@@ -11,6 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'coffee-script-source', '1.8.0'
+gem 'twitter-bootstrap-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -53,9 +54,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'simple_form'
+gem 'simple_form', '>= 3.1.0.rc2'
 gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
 gem 'geocoder'
 
 gem 'fullcontact'
+
+gem "font-awesome-rails"

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Equipment</h1>
+<h1>EQUIPMENT</h1>
 
 <table class="table table-striped">
   <thead>
@@ -26,15 +26,15 @@
         <td><%= equipment.description %></td>
         <td><%= equipment.condition %></td>
         <td><%= equipment.photo %></td>
-        <td><%= equipment.estimated_value %></td>
+        <td><%= number_to_currency(equipment.estimated_value) %></td>
         <td><%= equipment.category.name %></td>
         <td><%= equipment.user.email %></td>
         <td><%= equipment.purchase_date %></td>
         <td><%= equipment.city %></td>
         <td><%= equipment.state %></td>
-        <td><%= link_to 'Show', equipment %></td>
-        <td><%= link_to 'Edit', edit_equipment_path(equipment) %></td>
-        <td><%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', equipment, :class => "btn btn-default btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_equipment_path(equipment), :class => "btn btn-default btn-sm" %></td>
+        <td><%= link_to ' Destroy', equipment, :class => "btn btn-danger btn-sm fa fa-trash-o fa-lg", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Equipment', new_equipment_path %>
+<%= link_to 'New Equipment', new_equipment_path, :class => "btn btn-default btn-lg" %>

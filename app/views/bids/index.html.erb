@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bids</h1>
+<h1>BIDS</h1>
 
 <table class="table table-striped">
   <thead>
@@ -15,12 +15,12 @@
   <tbody>
     <% @bids.each do |bid| %>
       <tr>
-        <td><%= bid.offer %></td>
+        <td><%= number_to_currency(bid.offer) %></td>
         <td><%= bid.equipment.name %></td>
         <td><%= bid.user.email %></td>
-        <td><%= link_to 'Show', bid %></td>
-        <td><%= link_to 'Edit', edit_bid_path(bid) %></td>
-        <td><%= link_to 'Destroy', bid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', bid, :class => "btn btn-default btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_bid_path(bid), :class => "btn btn-default btn-sm" %></td>
+        <td><%= link_to ' Destroy', bid, :class => "btn btn-danger btn-sm fa fa-trash-o fa-lg", method: :delete, data: { confirm: 'Are you sure?' }  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,5 @@
 
 <br>
 
-<%= link_to 'New Bid', new_bid_path %>
+<%= link_to 'New Bid', new_bid_path, :class => "btn btn-default btn-lg" %>
+ 
