@@ -25,7 +25,7 @@
         <td><%= equipment.name %></td>
         <td><%= equipment.description %></td>
         <td><%= equipment.condition %></td>
-        <td><%= equipment.photo %></td>
+        <td><%= image_tag equipment.photo %></td>
         <td><%= number_to_currency(equipment.estimated_value) %></td>
         <td><%= equipment.category.name %></td>
         <td><%= equipment.user.email %></td>
